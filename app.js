@@ -1,9 +1,10 @@
-var express = require('express');
-var expressSanitizer = require('express-sanitizer');
-var methodOverride = require('method-override');
-var BodyParser = require('body-parser');
-var mongoose  = require('mongoose');
-var app = express();
+const express = require('express');
+const expressSanitizer = require('express-sanitizer');
+const methodOverride = require('method-override');
+const BodyParser = require('body-parser');
+const mongoose  = require('mongoose');
+const port = process.env.PORT || 3000;
+const app = express();
 
 mongoose.connect('mongodb://localhost:27017/blogs');
 app.set('view engine', 'ejs');
@@ -97,6 +98,6 @@ app.delete('/blogs/:id', (req, res)=> {
           });
         });
 
-app.listen(3000, ()=> {
-  console.log('appcamp is started at port 3000');
+app.listen(port, ()=> {
+  console.log(`Server has stated at ${port}`);
 });
