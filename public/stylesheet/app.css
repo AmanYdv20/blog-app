@@ -1,0 +1,23 @@
+i.icon {
+  font-size: 2em;
+}
+
+.container.main {
+  margin-top: 7em;
+}
+
+#delete {
+  display: inline;
+}
+
+i.right{
+  font-size: 1em;
+}
+
+.button {
+  box-shadow: 0 0.5em #050101;
+}
+
+button:hover {
+  background-color: black;
+}
